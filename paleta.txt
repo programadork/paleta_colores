@@ -1,0 +1,20 @@
+from tkinter import *
+from tkinter import colorchooser as vista
+
+color = Tk()
+color.title("Paleta de Colores")
+color.geometry("400x300")
+
+
+def colores():
+    paleta = vista.askcolor()
+
+    color.config(bg=paleta[1]) 
+
+
+boton = Button(color, text="Colores", width=20, height=3,command=colores)
+boton.grid(row=0,column=0,padx=120,pady=110)
+
+
+
+color.mainloop()
